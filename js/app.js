@@ -16,13 +16,11 @@ app.config(function($routeProvider){
 
 app.controller('searchController', ['$scope','$location', function($scope, $location){
     $scope.onClick = function(){
-        if(!$scope.query)console.log('Not param!');return false;
         $location.path('/detail/' + $scope.query);
     }
 }]);
 
 app.controller('detailController', ['$scope','$http','$routeParams', function($scope, $routeParams, $http){
-    console.log(!!$routeParams.id);
     if(angular.isDefined($routeParams.id) && !!$routeParams.id){
         var id = $routeParams.id;
         console.log(id);
@@ -40,7 +38,19 @@ app.controller('detailController', ['$scope','$http','$routeParams', function($s
 
         });
 
+    }
+    $scope.isOverlay = false;
 
 
+    //overlayを開く
+    $scope.openOverlay = function(){
+        console.log("open");
+        $scope.isOverlay = !$scope.isOverlay;
+    }
+
+    //overlayを閉じる
+    $scope.closeOverlay = function(){
+        console.log("close");
+        $scope.isOverlay = !$scope.isOverlay;
     }
 }]);

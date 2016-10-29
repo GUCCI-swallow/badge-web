@@ -3,23 +3,31 @@
         <div class="badge-wrapper">
             <ul class="honeycomb">
                 <li>
-                    <img src="./img/badge1.png" alt="">
-                    <img src="./img/computer.png" alt="">
+                    <img ng-click="openOverlay()" src="./img/computer.png" alt="">
+                    <img ng-click="openOverlay()" src="./img/academy.png" alt="">
                 </li>
                 <li>
-                    <img src="./img/badge2.png" alt="">
+                    <img ng-click="openOverlay()" src="./img/club.png" alt="">
                     <img id="user-icon" src="./img/mizuki.png" alt="">
-                    <img src="./img/work.png" alt="">
+                    <img ng-click="openOverlay()" src="./img/work.png" alt="">
                 </li>
                 <li>
-                    <img src="./img/mizuki.png" alt="">
-                    <img src="./img/mizuki.png" alt="">
+                    <img ng-click="openOverlay()" src="./img/research.png" alt="">
+                    <img ng-click="openOverlay()" src="./img/other.png" alt="">
                 </li>
             </ul>
         </div>
 
         <div class="detail-wrapper">
-            hogehoge
+            <table class="info-table">
+                <tr>
+                    <th>ユーザー名</th>
+                    <th>メールアドレス</th>
+                </tr>
+                    <td>Mizuki_Sonoko</td>
+                    <td>s123456@u-aizu.ac.jp</td>
+                </tr>
+            </table>
         </div>
     </div>
 
@@ -50,5 +58,126 @@
                 <td>100点</td>
             </tr>
         </table>
+    </div>
+    <div class="badgelist-overlay" ng-click="closeOverlay()" ng-class="{'overlay-show':isOverlay}">
+        <div class="badgelist-wrapper">
+            <table class="badgelist-table">
+                <tr>
+                    <th>日付</th>
+                    <th>カテゴリー</th>
+                    <th>名前</th>
+                    <th>From</th>
+                    <th>説明</th>
+                </tr>
+                <tr>
+                    <td>2016/10/29</td>
+                    <td>computer</td>
+                    <td>100てんでしょう</td>
+                    <td>さかぐちたろう</td>
+                    <td>ほげほげほげたろう</td>
+                </tr>
+                <tr>
+                    <td>2016/10/29</td>
+                    <td>computer</td>
+                    <td>100てんでしょう</td>
+                    <td>さかぐちたろう</td>
+                    <td>ほげほげほげたろう</td>
+                </tr>
+                <tr>
+                    <td>2016/10/29</td>
+                    <td>computer</td>
+                    <td>100てんでしょう</td>
+                    <td>さかぐちたろう</td>
+                    <td>ほげほげほげたろう</td>
+                </tr>
+                <tr>
+                    <td>2016/10/29</td>
+                    <td>computer</td>
+                    <td>100てんでしょう</td>
+                    <td>さかぐちたろう</td>
+                    <td>ほげほげほげたろう</td>
+                </tr>
+                <tr>
+                    <td>2016/10/29</td>
+                    <td>computer</td>
+                    <td>100てんでしょう</td>
+                    <td>さかぐちたろう</td>
+                    <td>ほげほげほげたろう</td>
+                </tr>
+                <tr>
+                    <td>2016/10/29</td>
+                    <td>computer</td>
+                    <td>100てんでしょう</td>
+                    <td>さかぐちたろう</td>
+                    <td>ほげほげほげたろう</td>
+                </tr>
+                <tr>
+                    <td>2016/10/29</td>
+                    <td>computer</td>
+                    <td>100てんでしょう</td>
+                    <td>さかぐちたろう</td>
+                    <td>ほげほげほげたろう</td>
+                </tr>
+                <tr>
+                    <td>2016/10/29</td>
+                    <td>computer</td>
+                    <td>100てんでしょう</td>
+                    <td>さかぐちたろう</td>
+                    <td>ほげほげほげたろう</td>
+                </tr>
+                <tr>
+                    <td>2016/10/29</td>
+                    <td>computer</td>
+                    <td>100てんでしょう</td>
+                    <td>さかぐちたろう</td>
+                    <td>ほげほげほげたろう</td>
+                </tr>
+                <tr>
+                    <td>2016/10/29</td>
+                    <td>computer</td>
+                    <td>100てんでしょう</td>
+                    <td>さかぐちたろう</td>
+                    <td>ほげほげほげたろう</td>
+                </tr>
+                <tr>
+                    <td>2016/10/29</td>
+                    <td>computer</td>
+                    <td>100てんでしょう</td>
+                    <td>さかぐちたろう</td>
+                    <td>ほげほげほげたろう</td>
+                </tr>
+                <tr>
+                    <td>2016/10/29</td>
+                    <td>computer</td>
+                    <td>100てんでしょう</td>
+                    <td>さかぐちたろう</td>
+                    <td>ほげほげほげたろう</td>
+                </tr>
+            </table>
+        </div>
+        <div class="badgedetail">
+            <table class="badgedetail-table">
+                <tr>
+                    <th>日付</th>
+                    <td>2016/10/30</td>
+                </tr>
+                <tr>
+                    <th>カテゴリ</th>
+                    <td>computer</td>
+                </tr>
+                <tr>
+                    <th>名前</th>
+                    <td>hoge</td>
+                </tr>
+                <tr>
+                    <th>From</th>
+                    <td>さかぐちたろう</td>
+                </tr>
+                <tr>
+                    <th>説明</th>
+                    <td>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttestestttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttestest</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
