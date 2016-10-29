@@ -39,6 +39,7 @@ app.controller('detailController', ['$scope','$http','$routeParams', function($s
         });
 
     }
+
     $scope.isOverlay = false;
 
 
@@ -50,7 +51,6 @@ app.controller('detailController', ['$scope','$http','$routeParams', function($s
 
     //overlayを閉じる
     $scope.closeOverlay = function(){
-        console.log("close");
         $scope.isOverlay = !$scope.isOverlay;
     }
 }]);
