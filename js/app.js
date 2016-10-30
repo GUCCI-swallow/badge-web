@@ -126,6 +126,13 @@ app.controller('detailController', ['$rootScope', '$scope','$http', function($ro
     $scope.onClickDetailList = function(i,e){
         console.log(i);
         e.preventDefault();
+        var dl = $scope.detailList[i];
+        $scope.detailTime = dl.timestamp;
+        $scope.detailCategory = dl.category;
+        $scope.detailName = dl.name;
+        $scope.detailFrom = dl.from;
+        $scope.detailDescription = dl.description;
+
     }
 
     //日付変換
