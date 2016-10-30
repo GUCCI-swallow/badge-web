@@ -3,17 +3,17 @@
         <div class="badge-wrapper">
             <ul class="honeycomb">
                 <li>
-                    <img ng-click="openOverlay()" src="./img/computer.png" alt="">
-                    <img ng-click="openOverlay()" src="./img/academy.png" alt="">
+                    <img ng-click="onClickImg('computer')" src="./img/computer.png" alt="">
+                    <img ng-click="onClickImg('academy')" src="./img/academy.png" alt="">
                 </li>
                 <li>
-                    <img ng-click="openOverlay()" src="./img/club.png" alt="">
+                    <img ng-click="onClickImg('club')" src="./img/club.png" alt="">
                     <img id="user-icon" src="./img/mizuki.png" alt="">
-                    <img ng-click="openOverlay()" src="./img/work.png" alt="">
+                    <img ng-click="onClickImg('work')" src="./img/work.png" alt="">
                 </li>
                 <li>
-                    <img ng-click="openOverlay()" src="./img/research.png" alt="">
-                    <img ng-click="openOverlay()" src="./img/other.png" alt="">
+                    <img ng-click="onClickImg('research')" src="./img/research.png" alt="">
+                    <img ng-click="onClickImg('other')" src="./img/other.png" alt="">
                 </li>
             </ul>
         </div>
@@ -22,10 +22,7 @@
             <table class="info-table">
                 <tr>
                     <th>ユーザー名</th>
-                    <th>メールアドレス</th>
-                </tr>
-                    <td>Mizuki_Sonoko</td>
-                    <td>s123456@u-aizu.ac.jp</td>
+                    <td>{{alias}}</td>
                 </tr>
             </table>
         </div>
@@ -39,23 +36,11 @@
                 <th>To</th>
                 <th>説明</th>
             </tr>
-            <tr>
-                <td>2016/10/29</td>
-                <td>さかぐちたろう</td>
-                <td>みずきそどこ</td>
-                <td>100点</td>
-            </tr>
-            <tr>
-                <td>2016/10/29</td>
-                <td>さかぐちたろう</td>
-                <td>みずきそどこ</td>
-                <td>100点</td>
-            </tr>
-            <tr>
-                <td>2016/10/29</td>
-                <td>さかぐちたろう</td>
-                <td>みずきそどこ</td>
-                <td>100点</td>
+            <tr ng-repeat="(key, values) in histories">
+                <td>{{transTimeStamp(values.timestamp)}}</td>
+                <td>{{values.from}}</td>
+                <td>{{values.to}}</td>
+                <td>{{values.description}}</td>
             </tr>
         </table>
     </div>
@@ -70,113 +55,37 @@
                     <th>From</th>
                     <th>説明</th>
                 </tr>
-                <tr>
-                    <td>2016/10/29</td>
-                    <td>computer</td>
-                    <td>100てんでしょう</td>
-                    <td>さかぐちたろう</td>
-                    <td>ほげほげほげたろう</td>
+                <tr ng-repeat="val in detailList" ng-click="onClickDetailList($index, $event)">
+                    <td>{{transTimeStamp(val.timestamp)}}</td>
+                    <td>{{val.category}}</td>
+                    <td>{{val.name}}</td>
+                    <td>{{val.from}}</td>
+                    <td>{{val.description}}</td>
                 </tr>
-                <tr>
-                    <td>2016/10/29</td>
-                    <td>computer</td>
-                    <td>100てんでしょう</td>
-                    <td>さかぐちたろう</td>
-                    <td>ほげほげほげたろう</td>
-                </tr>
-                <tr>
-                    <td>2016/10/29</td>
-                    <td>computer</td>
-                    <td>100てんでしょう</td>
-                    <td>さかぐちたろう</td>
-                    <td>ほげほげほげたろう</td>
-                </tr>
-                <tr>
-                    <td>2016/10/29</td>
-                    <td>computer</td>
-                    <td>100てんでしょう</td>
-                    <td>さかぐちたろう</td>
-                    <td>ほげほげほげたろう</td>
-                </tr>
-                <tr>
-                    <td>2016/10/29</td>
-                    <td>computer</td>
-                    <td>100てんでしょう</td>
-                    <td>さかぐちたろう</td>
-                    <td>ほげほげほげたろう</td>
-                </tr>
-                <tr>
-                    <td>2016/10/29</td>
-                    <td>computer</td>
-                    <td>100てんでしょう</td>
-                    <td>さかぐちたろう</td>
-                    <td>ほげほげほげたろう</td>
-                </tr>
-                <tr>
-                    <td>2016/10/29</td>
-                    <td>computer</td>
-                    <td>100てんでしょう</td>
-                    <td>さかぐちたろう</td>
-                    <td>ほげほげほげたろう</td>
-                </tr>
-                <tr>
-                    <td>2016/10/29</td>
-                    <td>computer</td>
-                    <td>100てんでしょう</td>
-                    <td>さかぐちたろう</td>
-                    <td>ほげほげほげたろう</td>
-                </tr>
-                <tr>
-                    <td>2016/10/29</td>
-                    <td>computer</td>
-                    <td>100てんでしょう</td>
-                    <td>さかぐちたろう</td>
-                    <td>ほげほげほげたろう</td>
-                </tr>
-                <tr>
-                    <td>2016/10/29</td>
-                    <td>computer</td>
-                    <td>100てんでしょう</td>
-                    <td>さかぐちたろう</td>
-                    <td>ほげほげほげたろう</td>
-                </tr>
-                <tr>
-                    <td>2016/10/29</td>
-                    <td>computer</td>
-                    <td>100てんでしょう</td>
-                    <td>さかぐちたろう</td>
-                    <td>ほげほげほげたろう</td>
-                </tr>
-                <tr>
-                    <td>2016/10/29</td>
-                    <td>computer</td>
-                    <td>100てんでしょう</td>
-                    <td>さかぐちたろう</td>
-                    <td>ほげほげほげたろう</td>
-                </tr>
+                
             </table>
         </div>
         <div class="badgedetail">
             <table class="badgedetail-table">
                 <tr>
                     <th>日付</th>
-                    <td>2016/10/30</td>
+                    <td>{{transTimeStamp(detailTime)}}</td>
                 </tr>
                 <tr>
                     <th>カテゴリ</th>
-                    <td>computer</td>
+                    <td>{{detailCategory}}</td>
                 </tr>
                 <tr>
                     <th>名前</th>
-                    <td>hoge</td>
+                    <td>{{detailName}}</td>
                 </tr>
                 <tr>
                     <th>From</th>
-                    <td>さかぐちたろう</td>
+                    <td>{{detailFrom}}</td>
                 </tr>
                 <tr>
                     <th>説明</th>
-                    <td>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttestestttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttestest</td>
+                    <td>{{detailDescription}}</td>
                 </tr>
             </table>
         </div>
